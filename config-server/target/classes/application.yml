@@ -1,0 +1,26 @@
+server:
+  port: 8088
+
+management:
+  context-path: /admin
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /admin/info
+    healthCheckUrlPath: /admin/health
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://devsvr.gcks/wificonfig/wificonfig-common.git
+          searchPaths: config-db
+          username: huqc
+          password: 12345678

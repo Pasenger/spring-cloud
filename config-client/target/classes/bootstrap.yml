@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:9099
+      name: uploads                   #使用uploads配置
+      profile: ${config.profile:dev}  #如果启动时未添加config.profile参数，则加载dev配置

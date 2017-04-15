@@ -1,5 +1,5 @@
 server:
-  port: 8088
+  port: 9099
 
 management:
   context-path: /admin
@@ -20,7 +20,8 @@ spring:
     config:
       server:
         git:
-          uri: http://devsvr.gcks/wificonfig/wificonfig-common.git
-          searchPaths: config-db
-          username: huqc
-          password: 12345678
+          uri: https://github.com/Pasenger/spring-cloud.git
+          searchPaths: config-repo
+#          如果使用自己的需要用户名密码的gitLab，需要配置username和password
+#          username:
+#          password:
